@@ -17,18 +17,27 @@ function insertData(username) {
             let response_parse = JSON.parse(this.responseText);
             console.log(response_parse);
 
-            let username = '@' + response_parse['login'];
+            let username = response_parse['login'];
+            let username_at = '@' + username;
             let name = response_parse['name'];
             let avatar_url = response_parse['avatar_url'];
             let profile_url = response_parse['html_url'];
             let num_repos = response_parse['public_repos'];
             let num_followers = response_parse['followers'];
 
-            document.getElementById('login').innerHTML = username;
+            let repos_url = 'https://github.com/' + username + '?tab=repositories';
+            let followers_url = 'https://github.com/' + username + '?tab=followers';
+
+            document.getElementById('login').innerHTML = username_at;
+            document.getElementById('login').href = profile_url;
             document.getElementById('name').innerHTML = name;
+            document.getElementById('name').href=profile_url;
             document.getElementById("avatar-url").src=avatar_url;
+            document.getElementById("avatar-link").href=profile_url;
             document.getElementById('num-repos').innerHTML = num_repos;
+            document.getElementById('repos-link').href = repos_url;
             document.getElementById('num-followers').innerHTML = num_followers;
+            document.getElementById('followers-link').href = followers_url;
         }
     };
     let username_url = 'https://api.github.com/users/' + username;

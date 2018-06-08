@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-
+    insertData('joe-lynn');
 });
 
 $(function() {
@@ -24,9 +24,11 @@ function insertData(username) {
             let profile_url = response_parse['html_url'];
             let num_repos = response_parse['public_repos'];
             let num_followers = response_parse['followers'];
+            let num_gists = response_parse['public_gists'];
 
             let repos_url = 'https://github.com/' + username + '?tab=repositories';
             let followers_url = 'https://github.com/' + username + '?tab=followers';
+            let gists_url = 'https://gist.github.com/' + username;
 
             document.getElementById('login').innerHTML = username_at;
             document.getElementById('login').href = profile_url;
@@ -36,6 +38,8 @@ function insertData(username) {
             document.getElementById("avatar-link").href=profile_url;
             document.getElementById('num-repos').innerHTML = num_repos;
             document.getElementById('repos-link').href = repos_url;
+            document.getElementById('num-gists').innerHTML = num_gists;
+            document.getElementById('gists-link').href = gists_url;
             document.getElementById('num-followers').innerHTML = num_followers;
             document.getElementById('followers-link').href = followers_url;
         }

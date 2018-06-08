@@ -1,5 +1,16 @@
 
 $(document).ready(function(){
+
+});
+
+$(function() {
+    $('#github-profile-form').on("submit",function(e) {
+        e.preventDefault(); // cancel the actual submit
+        insertData(document.getElementById("github-username").value);
+    });
+});
+
+function insertData(username) {
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
@@ -24,7 +35,7 @@ $(document).ready(function(){
     };
     xhttp.open("GET", "https://api.github.com/users/joe-lynn", true);
     xhttp.send();
-});
+}
 
 // Response:
 // {

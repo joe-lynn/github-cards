@@ -15,27 +15,41 @@ function insertData(username) {
     xhttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
             let response_parse = JSON.parse(this.responseText);
-            var username = response_parse['login'];
-            var avatar_url = response_parse['avatar_url'];
-            var profile_url = response_parse['html_url'];
+            console.log(response_parse);
 
-            //api only links
-            var followers_url = response_parse['followers_url'];
-            var following_url = response_parse['following_url'];
-            var gists_url = response_parse['gists_url'];
-            var starred_url = response_parse['starred_url'];
+            let username = '@' + response_parse['login'];
+            let name = response_parse['name'];
+            let avatar_url = response_parse['avatar_url'];
+            let profile_url = response_parse['html_url'];
+            let num_repos = response_parse['public_repos'];
+            let num_followers = response_parse['followers'];
 
-            var subscriptions = response_parse['subscriptions_url'];
-
-
-
-            document.getElementById('login').innerHTML = response_parse['login'];
-            console.log(response_parse['login']);
+            document.getElementById('login').innerHTML = username;
+            document.getElementById('name').innerHTML = name;
+            document.getElementById("avatar-url").src=avatar_url;
+            document.getElementById('num-repos').innerHTML = num_repos;
+            document.getElementById('num-followers').innerHTML = num_followers;
         }
     };
-    xhttp.open("GET", "https://api.github.com/users/joe-lynn", true);
+    let username_url = 'https://api.github.com/users/' + username;
+    xhttp.open("GET", username_url, true);
     xhttp.send();
 }
+
+// relevant Response:
+// {
+//     "login": "joe-lynn",
+//     "avatar_url": "https://avatars2.githubusercontent.com/u/18252709?v=4",
+//     "html_url": "https://github.com/joe-lynn",
+//     "name": null,
+//     "company": null,
+//     "hireable": true,
+//     "bio": "Software Engineering Student at Rochester Institute Of Technology",
+//     "public_repos": 14,
+//     "public_gists": 0,
+//     "followers": 3,
+//     "following": 5,
+// }
 
 // Response:
 // {

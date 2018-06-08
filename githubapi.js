@@ -1,9 +1,25 @@
 
 $(document).ready(function(){
-    var xhttp = new XMLHttpRequest();
+    let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            console.log(this.responseText);
+        if (this.readyState === 4 && this.status === 200) {
+            let response_parse = JSON.parse(this.responseText);
+            var username = response_parse['login'];
+            var avatar_url = response_parse['avatar_url'];
+            var profile_url = response_parse['html_url'];
+
+            //api only links
+            var followers_url = response_parse['followers_url'];
+            var following_url = response_parse['following_url'];
+            var gists_url = response_parse['gists_url'];
+            var starred_url = response_parse['starred_url'];
+
+            var subscriptions = response_parse['subscriptions_url'];
+
+
+
+            document.getElementById('login').innerHTML = response_parse['login'];
+            console.log(response_parse['login']);
         }
     };
     xhttp.open("GET", "https://api.github.com/users/joe-lynn", true);

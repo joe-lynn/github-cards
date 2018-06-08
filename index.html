@@ -12,57 +12,75 @@
     <script src="githubapi.js"></script>
 
 </head>
-<body>
+<body class="bg-primary">
     <div class="container">
+        <div class="jumbotron mt-5 shadow-lg rounded bg-warning">
+            <h1 class="display-4">github-cards</h1>
+            <p class="lead">Generate your personalized Github profile card below!</p>
+            <hr class="my-4">
+            <div class="row">
+                <div class="col-md-6">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">GitHub Username</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="joe-lynn">
+                            <small id="emailHelp" class="form-text text-muted">Profile data must be set to public</small>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <div class="card shadow-sm bg-white rounded">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    <a href="https://github.com/joe-lynn"><img height="48" width="48" src="https://avatars0.githubusercontent.com/u/18252709?s=460&v=4"></a>
+                                </div>
+                                <div class="col-md-4">
+                                    <a href="https://github.com/joe-lynn" id="login" style="color: #292f33; font-weight: bold; font-size: 1.2em;">Joe Lynn</a>
+                                    <a href="https://github.com/joe-lynn" style="color: #808080;">@joe-lynn</a>
+                                </div>
+                                <div class="col-md-0">
+
+                                </div>
+                                <div class="col-md-5">
+                                    <button class="btn btn-small btn-default">Follow on Github</button>
+                                </div>
+                            </div>
+                            <div class="row mt-3">
+                                <div class="col-md-4 border-right border-top border-bottom py-2">
+                                    <a href="https://github.com/joe-lynn?tab=repositories"> <div style="color: black; font-weight: bold;">21</div> <div style="color: #808080; font-size: 0.9em;">REPOS</div></a>
+                                </div>
+                                <div class="col-md-4 border-right border-top border-bottom py-2">
+                                    <a href="https://github.com/joe-lynn?tab=repositories"> <div style="color: black; font-weight: bold;">5</div> <div style="color: #808080; font-size: 0.9em;">STARS</div></a>
+                                </div>
+                                <div class="col-md-4 border-top border-bottom py-2">
+                                    <a href="https://github.com/joe-lynn?tab=repositories"> <div style="color: black; font-weight: bold;">3</div> <div style="color: #808080; font-size: 0.9em;">FOLLOWERS</div></a>
+                                </div>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-md-4">
+                                    <div style="font-size: 0.8em;"><span style="background-color:#3572A5; border-radius: 50%; width: 12px; height: 12px; font-size: 12px; display: inline-block"></span> Python</div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div style="font-size: 0.8em;"><span style="background-color:#f1e05a; border-radius: 50%; width: 12px; height: 12px; font-size: 12px; display: inline-block"></span> Javascript</div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div style="font-size: 0.8em;"><span style="background-color:#e34c26; border-radius: 50%; width: 12px; height: 12px; font-size: 12px; display: inline-block"></span> HTML/CSS</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <br>
         <br>
         <br>
         <br>
         <br>
         <div class="row">
-            <div class="col-sm-12 col-lg-4">
-                <div class="card shadow-sm bg-white rounded">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-md-2">
-                                <a href="https://github.com/joe-lynn"><img height="48" width="48" src="https://avatars0.githubusercontent.com/u/18252709?s=460&v=4"></a>
-                            </div>
-                            <div class="col-md-4">
-                                <a href="https://github.com/joe-lynn" style="color: #292f33; font-weight: bold; font-size: 1.2em;">Joe Lynn</a>
-                                <a href="https://github.com/joe-lynn" style="color: #808080;">@joe-lynn</a>
-                            </div>
-                            <div class="col-md-0">
 
-                            </div>
-                            <div class="col-md-5">
-                                <button class="btn btn-small btn-default">Follow on Github</button>
-                            </div>
-                        </div>
-                        <div class="row mt-3">
-                            <div class="col-md-4 border-right border-top border-bottom py-2">
-                                <a href="https://github.com/joe-lynn?tab=repositories"> <div style="color: black; font-weight: bold;">21</div> <div style="color: #808080; font-size: 0.9em;">REPOS</div></a>
-                            </div>
-                            <div class="col-md-4 border-right border-top border-bottom py-2">
-                                <a href="https://github.com/joe-lynn?tab=repositories"> <div style="color: black; font-weight: bold;">5</div> <div style="color: #808080; font-size: 0.9em;">STARS</div></a>
-                            </div>
-                            <div class="col-md-4 border-top border-bottom py-2">
-                                <a href="https://github.com/joe-lynn?tab=repositories"> <div style="color: black; font-weight: bold;">3</div> <div style="color: #808080; font-size: 0.9em;">FOLLOWERS</div></a>
-                            </div>
-                        </div>
-                        <div class="row mt-2">
-                            <div class="col-md-4">
-                                <div style="font-size: 0.8em;"><span style="background-color:#3572A5; border-radius: 50%; width: 12px; height: 12px; font-size: 12px; display: inline-block"></span> Python</div>
-                            </div>
-                            <div class="col-md-4">
-                                <div style="font-size: 0.8em;"><span style="background-color:#f1e05a; border-radius: 50%; width: 12px; height: 12px; font-size: 12px; display: inline-block"></span> Javascript</div>
-                            </div>
-                            <div class="col-md-4">
-                                <div style="font-size: 0.8em;"><span style="background-color:#e34c26; border-radius: 50%; width: 12px; height: 12px; font-size: 12px; display: inline-block"></span> HTML/CSS</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
     </div>
 </body>

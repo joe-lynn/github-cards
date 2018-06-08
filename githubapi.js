@@ -30,7 +30,7 @@ $(document).ready(function(){
             '\n' +
             '                                    </div>\n' +
             '                                    <div class="col-md-4">\n' +
-            '                                        <button class="follow-button" >Follow on Github</button>\n' +
+            '                                        <button class="follow-button" >Follow</button>\n' +
             '                                    </div>\n' +
             '                                </div>\n' +
             '                                <div class="row mt-3">\n' +
@@ -53,7 +53,7 @@ $(document).ready(function(){
             '                        </div>'
         insertData(user);
     } else {
-        insertData('joe-lynn')
+        insertData('joe-lynn');
     }
 });
 
@@ -84,6 +84,8 @@ function insertData(username) {
             let followers_url = 'https://github.com/' + username + '?tab=followers';
             let gists_url = 'https://gist.github.com/' + username;
 
+            let embed_string = '<iframe src="https://joe-lynn.github.io/github-cards/?usr=' + username + '" height="200" width="400"></iframe>';
+
             document.getElementById('login').innerHTML = username_at;
             document.getElementById('login').href = profile_url;
             document.getElementById('name').innerHTML = name;
@@ -97,6 +99,8 @@ function insertData(username) {
             document.getElementById('num-followers').innerHTML = num_followers;
             document.getElementById('followers-link').href = followers_url;
             document.getElementById('bio-text').innerHTML = bio_text;
+
+            document.getElementById('embed-text').value = embed_string;
         }
     };
     let username_url = 'https://api.github.com/users/' + username;
@@ -104,6 +108,10 @@ function insertData(username) {
     xhttp.send();
 }
 
+function selectEmbed() {
+    document.getElementById('embed-text').select();
+    document.execCommand("copy");
+}
 // relevant Response:
 // {
 //     "login": "joe-lynn",

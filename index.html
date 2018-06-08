@@ -11,80 +11,150 @@
 
     <script src="githubapi.js"></script>
 
+    <style>
+        .follow-button {
+            align-items: flex-start ;
+            background-color: rgb(239, 243, 246) ;
+            background-image: linear-gradient(-180deg, rgb(250, 251, 252) 0%, rgb(239, 243, 246) 90%) ;
+            background-position-x: -1px ;
+            background-position-y: -1px ;
+            background-size: 110% 110% ;
+            border-bottom-color: rgba(27, 31, 35, 0.2) ;
+            border-bottom-left-radius: 3.5px ;
+            border-bottom-right-radius: 3.5px ;
+            border-bottom-style: solid ;
+            border-bottom-width: 1px ;
+            border-image-outset: 0px ;
+            border-image-repeat: stretch ;
+            border-image-slice: 100% ;
+            border-image-source: none ;
+            border-image-width: 1 ;
+            border-left-color: rgba(27, 31, 35, 0.2) ;
+            border-left-style: solid ;
+            border-left-width: 1px ;
+            border-right-color: rgba(27, 31, 35, 0.2) ;
+            border-right-style: solid ;
+            border-right-width: 1px ;
+            border-top-color: rgba(27, 31, 35, 0.2) ;
+            border-top-left-radius: 3.5px ;
+            border-top-right-radius: 3.5px ;
+            border-top-style: solid ;
+            border-top-width: 1px ;
+            box-sizing: border-box ;
+            color: rgb(36, 41, 46) ;
+            cursor: pointer ;
+            display: block ;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" ;
+            font-size: 14px ;
+            font-style: normal ;
+            font-variant-caps: normal ;
+            font-variant-east-asian: normal ;
+            font-variant-ligatures: normal ;
+            font-variant-numeric: normal ;
+            font-weight: 600 ;
+            height: 34px ;
+            letter-spacing: normal ;
+            line-height: 20px ;
+            margin-bottom: 0px ;
+            margin-left: 0px ;
+            margin-right: 0px ;
+            overflow-x: visible ;
+            overflow-y: visible ;
+            padding-bottom: 6px ;
+            padding-left: 12px ;
+            padding-right: 12px ;
+            padding-top: 6px ;
+            position: relative ;
+            text-align: center ;
+            text-indent: 0px ;
+            text-rendering: auto ;
+            text-shadow: none ;
+            text-size-adjust: 100% ;
+            text-transform: none ;
+            top: 0px ;
+            user-select: none ;
+            vertical-align: middle ;
+            white-space: nowrap ;
+            width: 100% ;
+            word-spacing: 0px ;
+            word-wrap: break-word ;
+            writing-mode: horizontal-tb ;
+            -webkit-appearance: none ;
+            -webkit-border-image: none ;
+        }
+    </style>
+
 </head>
 <body class="bg-primary">
     <div class="container">
-        <div class="jumbotron mt-5 shadow-lg rounded bg-warning">
-            <h1 class="display-4">github-cards</h1>
-            <p class="lead">Generate your personalized Github profile card below!</p>
-            <hr class="my-4">
-            <div class="row">
-                <div class="col-md-6">
-                    <form id="github-profile-form">
-                        <div class="form-group">
-                            <label for="github-username">GitHub Username</label>
-                            <input type="text" class="form-control" id="github-username" aria-describedby="githubhelp" placeholder="joe-lynn">
-                            <small id="githubhelp" class="form-text text-muted">Profile data must be set to public</small>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
-                    </form>
-                </div>
-                <div class="col-md-6">
-                    <div class="card shadow-sm bg-white rounded">
-                        <div class="card-body">
-                            <div class="row">
-                                <div class="col-md-2">
-                                    <a id="avatar-link" href=""><img class="img-thumbnail" id="avatar-url" height="100" width="100" src=""></a>
-                                </div>
-                                <div class="col-md-5">
-                                    <div class="row">
-                                        <a href="" id="name" style="color: #292f33; font-weight: bold; font-size: 1.2em;">Joe Lynn</a>
-                                    </div>
-                                    <div class="row">
-                                        <a href="" id="login" style="color: #808080;">@joe-lynn</a>
-                                    </div>
-                                </div>
-                                <div class="col-md-0">
+        <div class="row">
+            <div class="jumbotron mt-5 shadow-lg rounded bg-warning"style="width: 100%">
+                <h1 class="display-4">github-cards</h1>
+                <p class="lead">Generate your personalized Github profile card below!</p>
+                <hr class="my-4">
+                <div class="row">
+                    <div class="col-md-4">
+                        <form id="github-profile-form">
+                            <div class="form-group">
+                                <label for="github-username">GitHub Username</label>
+                                <input type="text" class="form-control" id="github-username" aria-describedby="githubhelp" placeholder="joe-lynn">
+                                <small id="githubhelp" class="form-text text-muted">Profile data must be set to public</small>
+                            </div>
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    </div>
+                    <div class="col-md-2">
 
+                    </div>
+                    <div class="col-md-6">
+                        <div class="card shadow-sm bg-white rounded">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-2">
+                                        <a id="avatar-link" href=""><img class="img-thumbnail" id="avatar-url" height="100" width="100" src=""></a>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div class="row">
+                                            <a href="" id="name" style="color: #292f33; font-weight: bold; font-size: 1.2em;">Joe Lynn</a>
+                                        </div>
+                                        <div class="row">
+                                            <a href="" id="login" style="color: #808080;">@joe-lynn</a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-0">
+
+                                    </div>
+                                    <div class="col-md-4">
+                                        <button class="follow-button">Follow on Github</button>
+                                    </div>
                                 </div>
-                                <div class="col-md-4">
-                                    <button class="btn btn-small btn-default">Follow on Github</button>
+                                <div class="row mt-3">
+                                    <div class="col-md-4 border-right border-top border-bottom py-2">
+                                        <a id="repos-link" href=""> <div style="color: black; font-weight: bold;" id="num-repos"></div> <div style="color: #808080; font-size: 0.9em;">REPOS</div></a>
+                                    </div>
+                                    <div class="col-md-4 border-right border-top border-bottom py-2">
+                                        <a id="gists-link" href=""> <div style="color: black; font-weight: bold;" id="num-gists"></div> <div style="color: #808080; font-size: 0.9em;">GISTS</div></a>
+                                    </div>
+                                    <div class="col-md-4 border-top border-bottom py-2">
+                                        <a id="followers-link" href=""> <div style="color: black; font-weight: bold;" id="num-followers"></div> <div style="color: #808080; font-size: 0.9em;">FOLLOWERS</div></a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="row mt-3">
-                                <div class="col-md-4 border-right border-top border-bottom py-2">
-                                    <a id="repos-link" href=""> <div style="color: black; font-weight: bold;" id="num-repos"></div> <div style="color: #808080; font-size: 0.9em;">REPOS</div></a>
-                                </div>
-                                <div class="col-md-4 border-right border-top border-bottom py-2">
-                                    <a id="gists-link" href=""> <div style="color: black; font-weight: bold;" id="num-gists"></div> <div style="color: #808080; font-size: 0.9em;">GISTS</div></a>
-                                </div>
-                                <div class="col-md-4 border-top border-bottom py-2">
-                                    <a id="followers-link" href=""> <div style="color: black; font-weight: bold;" id="num-followers"></div> <div style="color: #808080; font-size: 0.9em;">FOLLOWERS</div></a>
-                                </div>
-                            </div>
-                            <div class="row mt-2">
-                                <div class="col-md-4">
-                                    <div style="font-size: 0.8em;"><span style="background-color:#3572A5; border-radius: 50%; width: 12px; height: 12px; font-size: 12px; display: inline-block"></span> Python</div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div style="font-size: 0.8em;"><span style="background-color:#f1e05a; border-radius: 50%; width: 12px; height: 12px; font-size: 12px; display: inline-block"></span> Javascript</div>
-                                </div>
-                                <div class="col-md-4">
-                                    <div style="font-size: 0.8em;"><span style="background-color:#e34c26; border-radius: 50%; width: 12px; height: 12px; font-size: 12px; display: inline-block"></span> HTML/CSS</div>
+                                <div class="row mt-2">
+                                    <div class="col-md-12">
+                                        <div id="bio-text" style="font-size: 0.8em; color: #808080;"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <label for="exampleTextarea">Get your embed code:</label>
+                        <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                    </div>
+                </div>
             </div>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="row">
-
         </div>
     </div>
 </body>

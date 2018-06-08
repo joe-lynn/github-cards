@@ -25,6 +25,7 @@ function insertData(username) {
             let num_repos = response_parse['public_repos'];
             let num_followers = response_parse['followers'];
             let num_gists = response_parse['public_gists'];
+            let bio_text = response_parse['bio'];
 
             let repos_url = 'https://github.com/' + username + '?tab=repositories';
             let followers_url = 'https://github.com/' + username + '?tab=followers';
@@ -42,6 +43,7 @@ function insertData(username) {
             document.getElementById('gists-link').href = gists_url;
             document.getElementById('num-followers').innerHTML = num_followers;
             document.getElementById('followers-link').href = followers_url;
+            document.getElementById('bio-text').innerHTML = bio_text;
         }
     };
     let username_url = 'https://api.github.com/users/' + username;

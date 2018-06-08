@@ -1,5 +1,55 @@
 
 $(document).ready(function(){
+    function getParameterByName(name, url) {
+        if (!url) url = window.location.href;
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+            results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+    var user = getParameterByName('usr');
+    document.body.innerHTML = '';
+    document.body.innerHTML += '<div class="card shadow-sm bg-white rounded" style="width: 400px; height: 200px">\n' +
+        '                            <div class="card-body">\n' +
+        '                                <div class="row">\n' +
+        '                                    <div class="col-md-2">\n' +
+        '                                        <a id="avatar-link" href=""><img class="img-thumbnail" id="avatar-url" height="100" width="100" src=""></a>\n' +
+        '                                    </div>\n' +
+        '                                    <div class="col-md-5">\n' +
+        '                                        <div class="row">\n' +
+        '                                            <a href="" id="name" style="color: #292f33; font-weight: bold; font-size: 1.2em;">Joe Lynn</a>\n' +
+        '                                        </div>\n' +
+        '                                        <div class="row">\n' +
+        '                                            <a href="" id="login" style="color: #808080;">@joe-lynn</a>\n' +
+        '                                        </div>\n' +
+        '                                    </div>\n' +
+        '                                    <div class="col-md-0">\n' +
+        '\n' +
+        '                                    </div>\n' +
+        '                                    <div class="col-md-4">\n' +
+        '                                        <button class="follow-button" >Follow on Github</button>\n' +
+        '                                    </div>\n' +
+        '                                </div>\n' +
+        '                                <div class="row mt-3">\n' +
+        '                                    <div class="col-md-4 border-right border-top border-bottom py-2">\n' +
+        '                                        <a id="repos-link" href=""> <div style="color: black; font-weight: bold;" id="num-repos"></div> <div style="color: #808080; font-size: 0.9em;">REPOS</div></a>\n' +
+        '                                    </div>\n' +
+        '                                    <div class="col-md-4 border-right border-top border-bottom py-2">\n' +
+        '                                        <a id="gists-link" href=""> <div style="color: black; font-weight: bold;" id="num-gists"></div> <div style="color: #808080; font-size: 0.9em;">GISTS</div></a>\n' +
+        '                                    </div>\n' +
+        '                                    <div class="col-md-4 border-top border-bottom py-2">\n' +
+        '                                        <a id="followers-link" href=""> <div style="color: black; font-weight: bold;" id="num-followers"></div> <div style="color: #808080; font-size: 0.9em;">FOLLOWERS</div></a>\n' +
+        '                                    </div>\n' +
+        '                                </div>\n' +
+        '                                <div class="row mt-2">\n' +
+        '                                    <div class="col-md-12">\n' +
+        '                                        <div id="bio-text" style="font-size: 0.8em; color: #808080;"></div>\n' +
+        '                                    </div>\n' +
+        '                                </div>\n' +
+        '                            </div>\n' +
+        '                        </div>'
     insertData('joe-lynn');
 });
 

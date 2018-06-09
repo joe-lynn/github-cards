@@ -101,15 +101,19 @@
                                 <input type="text" class="form-control" id="github-username" aria-describedby="githubhelp" placeholder="joe-lynn">
                                 <small id="githubhelp" class="form-text text-muted">Profile data must be set to public</small>
                             </div>
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-info">Submit</button>
                         </form>
                     </div>
                 </div>
-                <hr class="my-4">
-                <div class="row pt-2">
-                    <div class="col-md-6">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Classique - 400x200</h5>
                         <div class="row">
-                            <div class="card shadow-sm rounded" style="height: 200px; width: 400px; background-color: #fffffa">
+                            <div class="card shadow-sm rounded mx-auto" style="height: 200px; width: 400px; background-color: #fffffa">
                                 <div class="card-body" style=";">
                                     <div class="row">
                                         <div class="col-md-2">
@@ -149,8 +153,24 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="row mt-3">
+                            <textarea readonly onclick="this.select()" style="resize: none; width: 400px" class="form-control mx-auto" id="embed-text" rows="3"></textarea>
+                        </div>
                         <div class="row mt-2">
-                            <div class="col-md-3">
+                            <button onclick="selectEmbed()" class="btn btn-sm btn-default mx-auto">Copy!</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Obvert</h5>
+                        <div class="row">
+                            <iframe class="mx-auto" src="?usr=joe-lynn?crd=obvert" ></iframe>
+                        </div>
+                        <div class="row mt-2">
+                            <div class="col-md-3 mx-auto">
                                 Customize:
                             </div>
                             <div class="col-md-3">
@@ -161,10 +181,10 @@
                             </div>
                         </div>
                         <div class="row mt-2">
-                            <textarea readonly onclick="this.select()" style="resize: none; width: 400px" class="form-control" id="embed-text" rows="3"></textarea>
+                            <textarea readonly onclick="this.select()" style="resize: none; width: 400px" class="form-control mx-auto" id="embed-text" rows="3"></textarea>
                         </div>
                         <div class="row mt-2">
-                            <button onclick="selectEmbed()" class="btn btn-sm btn-default">Copy!</button>
+                            <button onclick="selectEmbed()" class="btn btn-sm btn-default mx-auto">Copy!</button>
                         </div>
                     </div>
                 </div>

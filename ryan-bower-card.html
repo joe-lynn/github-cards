@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+</head>
+<style>
+    body {
+        display: inline-block;
+        margin:0;
+        padding:0;
+        font-family: Sans-Serif;
+    }
+    a {
+        text-decoration: none;
+    }
+    .card-body {
+        width: 300px;
+        height: 378px;
+        border-radius: 10px;
+        border: 2px solid lightgray;
+        background-color: white;
+    }
+    .card-top-section {
+        height: 40px;
+    }
+    .card-bottom-section{
+        margin-top: 80px; /* calc: img 75px + border 5px */
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        background-color: #4078C0; /* Github official blue */
+    }
+    .github-logo-holder {
+        background-color: transparent;
+    }
+    .github-logo-holder img {
+        padding: 5px;
+    }
+    .profile-img-holder {
+        position: relative;
+        width: 160px;
+        margin-left:auto;
+        margin-right:auto;
+    }
+    .profile-img-holder .profile-img {
+
+        width: 150px;
+        height: 150px;
+        border-radius: 100px;
+        background: no-repeat center
+        URL("https://avatars1.githubusercontent.com/u/13069486?s=400&u=6ab8ffd5b3bfed00aea69b070d141e2620fc6f7c&v=4");
+        background-size: cover;
+        border: 5px solid white;
+    }
+    .profile-desc .profile-full-name {
+        margin: 0px;
+        padding-top: 100px;
+        font-size: 32px;
+    }
+    .profile-desc .profile-user-name {
+        margin: 0px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-size: 23px;
+    }
+    .profile-stats {
+        border-top: 1px solid lightgray;
+    }
+    .stat {
+        display:inline-block;
+        width: 33.3333%;
+    }
+    .stat .stat-contents {
+        border-right: solid 1px lightgray;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    .profile-stats .stat:last-child .stat-contents {
+        border-right: none;
+    }
+    .stat .stat-amount,
+    .stat .stat-name {
+        margin: 0px;
+    }
+    .profile-desc {
+        text-align:center;
+        color: white;
+    }
+    .profile-stats{
+        text-align:center;
+        color: #333;
+    }
+</style>
+<body>
+<div class="card-container">
+    <a href="https://github.com/ryan-bower" target="_blank" >
+        <div class="card-body">
+            <div class="card-top-section">
+                <div class="github-logo-holder">
+                    <img src="assets/GitHub-Mark-32px.png"
+                         alt="Github Logo" width="25px">
+                </div>
+                <div class="profile-img-holder">
+                    <div class="profile-img"></div>
+                    <!-- img src="https://avatars1.githubusercontent.com/u/13069486?s=400&u=6ab8ffd5b3bfed00aea69b070d141e2620fc6f7c&v=4"
+                         alt="Github Profile Picture" width="100px" -->
+                </div>
+            </div>
+            <div class="card-bottom-section">
+                <div class="profile-desc">
+                    <h1 class="profile-full-name">Ryan Bower</h1>
+                    <h1 class="profile-user-name">@ryan-bower</h1>
+                </div>
+                <div class="profile-stats">
+                    <!-- TODO: Replace with dynamic js solution -->
+                    <div class="stat">
+                        <div class="stat-contents">
+                            <h1 class="stat-amount">13</h1>
+                            <p class="stat-name">Repos</p>
+                        </div>
+                    </div><!--
+                    --><div class="stat">
+                        <div class="stat-contents">
+                            <h1 class="stat-amount">3</h1>
+                            <p class="stat-name">Gists</p>
+                        </div>
+                    </div><!--
+                    --><div class="stat">
+                        <div class="stat-contents">
+                            <h1 class="stat-amount">5</h1>
+                            <p class="stat-name">Followers</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </a>
+</div>
+</body>
+</html>

@@ -108,54 +108,68 @@
                 <hr class="my-4">
                 <div class="row pt-2">
                     <div class="col-md-6">
-                        <div class="card shadow-sm rounded" style="height: 200px; width: 400px; background-color: #fffffa">
-                            <div class="card-body" style=";">
-                                <div class="row">
-                                    <div class="col-md-2">
-                                        <a id="avatar-link" href=""><img class="img-thumbnail" id="avatar-url" height="100" width="100" src=""></a>
-                                    </div>
-                                    <div class="col-md-5">
-                                        <div class="row">
-                                            <a href="" id="name" style="color: #292f33; font-weight: bold; font-size: 1.2em;">Joe Lynn</a>
+                        <div class="row">
+                            <div class="card shadow-sm rounded" style="height: 200px; width: 400px; background-color: #fffffa">
+                                <div class="card-body" style=";">
+                                    <div class="row">
+                                        <div class="col-md-2">
+                                            <a id="avatar-link" href=""><img class="img-thumbnail" id="avatar-url" height="100" width="100" src=""></a>
                                         </div>
-                                        <div class="row">
-                                            <a href="" id="login" style="color: #808080;">@joe-lynn</a>
+                                        <div class="col-md-5">
+                                            <div class="row">
+                                                <a href="" id="name" style="color: #292f33; font-weight: bold; font-size: 1.2em;">Joe Lynn</a>
+                                            </div>
+                                            <div class="row">
+                                                <a href="" id="login" style="color: #808080;">@joe-lynn</a>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="col-md-0">
+                                        <div class="col-md-0">
 
+                                        </div>
+                                        <div class="col-md-4">
+                                            <button class="follow-button" >Follow</button>
+                                        </div>
                                     </div>
-                                    <div class="col-md-4">
-                                        <button class="follow-button" >Follow</button>
+                                    <div class="row mt-2">
+                                        <div class="col-md-4 border-right border-top border-bottom py-2">
+                                            <a id="repos-link" href=""> <div style="color: black; font-weight: bold;" id="num-repos"></div> <div style="color: #808080; font-size: 0.9em;">REPOS</div></a>
+                                        </div>
+                                        <div class="col-md-4 border-right border-top border-bottom py-2">
+                                            <a id="gists-link" href=""> <div style="color: black; font-weight: bold;" id="num-gists"></div> <div style="color: #808080; font-size: 0.9em;">GISTS</div></a>
+                                        </div>
+                                        <div class="col-md-4 border-top border-bottom py-2">
+                                            <a id="followers-link" href=""> <div style="color: black; font-weight: bold;" id="num-followers"></div> <div style="color: #808080; font-size: 0.9em;">FOLLOWERS</div></a>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="row mt-2">
-                                    <div class="col-md-4 border-right border-top border-bottom py-2">
-                                        <a id="repos-link" href=""> <div style="color: black; font-weight: bold;" id="num-repos"></div> <div style="color: #808080; font-size: 0.9em;">REPOS</div></a>
-                                    </div>
-                                    <div class="col-md-4 border-right border-top border-bottom py-2">
-                                        <a id="gists-link" href=""> <div style="color: black; font-weight: bold;" id="num-gists"></div> <div style="color: #808080; font-size: 0.9em;">GISTS</div></a>
-                                    </div>
-                                    <div class="col-md-4 border-top border-bottom py-2">
-                                        <a id="followers-link" href=""> <div style="color: black; font-weight: bold;" id="num-followers"></div> <div style="color: #808080; font-size: 0.9em;">FOLLOWERS</div></a>
-                                    </div>
-                                </div>
-                                <div class="row mt-2">
-                                    <div class="col-md-12">
-                                        <div id="bio-text" style="font-size: 0.8em; color: #808080;"></div>
+                                    <div class="row mt-2">
+                                        <div class="col-md-12">
+                                            <div id="bio-text" style="font-size: 0.8em; color: #808080;"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <textarea readonly onclick="this.select()" style="resize: none; width: 400px" class="form-control mt-3" id="embed-text" rows="3"></textarea>
-                        <button onclick="selectEmbed()" class="btn btn-sm btn-default mt-2">Copy!</button>
+                        <div class="row mt-2">
+                            <div class="col-md-3">
+                                Customize:
+                            </div>
+                            <div class="col-md-3">
+                                <button class="btn btn-sm btn-default">tst</button>
+                            </div>
+                            <div class="col-md-3">
+                                <button class="btn btn-sm btn-default">tst</button>
+                            </div>
+                        </div>
+                        <div class="row mt-2">
+                            <textarea readonly onclick="this.select()" style="resize: none; width: 400px" class="form-control" id="embed-text" rows="3"></textarea>
+                        </div>
+                        <div class="row mt-2">
+                            <button onclick="selectEmbed()" class="btn btn-sm btn-default">Copy!</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <row>
-            <iframe src="https://joe-lynn.github.io/github-cards/?usr=joe-lynn" height="200" width="400"></iframe>
-        </row>
     </div>
 </body>
 </html>

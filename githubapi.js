@@ -11,6 +11,7 @@ $(document).ready(function(){
     }
     let user = getParameterByName('usr');
     let card = getParameterByName('crd');
+    let primary_color = getParameterByName('pri');
 
     if (user != null) {
         if (card != null) {
@@ -23,45 +24,74 @@ $(document).ready(function(){
             }
             switch(card) {
                 case 'classique':
-                    document.body.innerHTML += '<div class="card shadow-sm bg-white rounded" style="width: 400px; height: 200px">\n' +
-                        '                            <div class="card-body">\n' +
-                        '                                <div class="row">\n' +
-                        '                                    <div class="col-md-2">\n' +
-                        '                                        <a id="avatar-link" href=""><img class="img-thumbnail" id="avatar-url" height="100" width="100" src=""></a>\n' +
-                        '                                    </div>\n' +
-                        '                                    <div class="col-md-5">\n' +
-                        '                                        <div class="row">\n' +
-                        '                                            <a href="" id="name" style="color: #292f33; font-weight: bold; font-size: 1.2em;">Joe Lynn</a>\n' +
-                        '                                        </div>\n' +
-                        '                                        <div class="row">\n' +
-                        '                                            <a href="" id="login" style="color: #808080;">@joe-lynn</a>\n' +
-                        '                                        </div>\n' +
-                        '                                    </div>\n' +
-                        '                                    <div class="col-md-0">\n' +
+                    document.body.innerHTML += '<!DOCTYPE html>\n' +
+                        '<html lang="en">\n' +
+                        '<head>\n' +
+                        '    <meta charset="UTF-8">\n' +
                         '\n' +
-                        '                                    </div>\n' +
-                        '                                    <div class="col-md-4">\n' +
-                        '                                        <button class="follow-button" >Follow</button>\n' +
-                        '                                    </div>\n' +
-                        '                                </div>\n' +
-                        '                                <div class="row mt-3">\n' +
-                        '                                    <div class="col-md-4 border-right border-top border-bottom py-2">\n' +
-                        '                                        <a id="repos-link" href=""> <div style="color: black; font-weight: bold;" id="num-repos"></div> <div style="color: #808080; font-size: 0.9em;">REPOS</div></a>\n' +
-                        '                                    </div>\n' +
-                        '                                    <div class="col-md-4 border-right border-top border-bottom py-2">\n' +
-                        '                                        <a id="gists-link" href=""> <div style="color: black; font-weight: bold;" id="num-gists"></div> <div style="color: #808080; font-size: 0.9em;">GISTS</div></a>\n' +
-                        '                                    </div>\n' +
-                        '                                    <div class="col-md-4 border-top border-bottom py-2">\n' +
-                        '                                        <a id="followers-link" href=""> <div style="color: black; font-weight: bold;" id="num-followers"></div> <div style="color: #808080; font-size: 0.9em;">FOLLOWERS</div></a>\n' +
-                        '                                    </div>\n' +
-                        '                                </div>\n' +
-                        '                                <div class="row mt-2">\n' +
-                        '                                    <div class="col-md-12">\n' +
-                        '                                        <div id="bio-text" style="font-size: 0.8em; color: #808080;"></div>\n' +
-                        '                                    </div>\n' +
-                        '                                </div>\n' +
-                        '                            </div>\n' +
-                        '                        </div>';
+                        '    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>\n' +
+                        '    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>\n' +
+                        '    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>\n' +
+                        '    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">\n' +
+                        '\n' +
+                        '</head>\n' +
+                        '<style>\n' +
+                        '\n' +
+                        '</style>\n' +
+                        '<body>\n' +
+                        '    <div class="card shadow-sm rounded mx-auto card-body-container">\n' +
+                        '        <div class="card-body">\n' +
+                        '            <div class="row">\n' +
+                        '                <div class="col-md-2 avatar-container">\n' +
+                        '                    <a id="" class="gc-avatar-link" href="">\n' +
+                        '                        <img class="img-thumbnail gc-avatar-url" height="100" width="100" src="">\n' +
+                        '                    </a>\n' +
+                        '                </div>\n' +
+                        '                <div class="col-md-5">\n' +
+                        '                    <div class="row">\n' +
+                        '                        <a href="" class="gc-name"></a>\n' +
+                        '                    </div>\n' +
+                        '                    <div class="row">\n' +
+                        '                        <a href="" class="gc-login"></a>\n' +
+                        '                    </div>\n' +
+                        '                </div>\n' +
+                        '                <div class="col-md-0">\n' +
+                        '\n' +
+                        '                </div>\n' +
+                        '                <div class="col-md-4">\n' +
+                        '                    <button class="follow-button">Follow</button>\n' +
+                        '                </div>\n' +
+                        '            </div>\n' +
+                        '            <div class="row mt-2">\n' +
+                        '                <div class="col-md-4 border-right border-top border-bottom py-2 link-section">\n' +
+                        '                    <a class="gc-repos-link" href="">\n' +
+                        '                        <div class="gc-num-repos"></div>\n' +
+                        '                        <div class="num-label">REPOS</div>\n' +
+                        '                    </a>\n' +
+                        '                </div>\n' +
+                        '                <div class="col-md-4 border-right border-top border-bottom py-2 link-section">\n' +
+                        '                    <a class="gc-gists-link" href="">\n' +
+                        '                        <div class="gc-num-gists"></div>\n' +
+                        '                        <div class="num-label">GISTS</div>\n' +
+                        '                    </a>\n' +
+                        '                </div>\n' +
+                        '                <div class="col-md-4 border-top border-bottom py-2 link-section">\n' +
+                        '                    <a class="gc-followers-link" href="">\n' +
+                        '                        <div class="gc-num-followers"></div>\n' +
+                        '                        <div class="num-label">FOLLOWERS</div>\n' +
+                        '                    </a>\n' +
+                        '                </div>\n' +
+                        '            </div>\n' +
+                        '            <div class="row mt-2">\n' +
+                        '                <div class="col-md-12">\n' +
+                        '                    <div class="gc-bio-text"></div>\n' +
+                        '                </div>\n' +
+                        '            </div>\n' +
+                        '        </div>\n' +
+                        '    </div>\n' +
+                        '</div>\n' +
+                        '</body>\n' +
+                        '</html>';
                     break;
                 case 'obvert':
                     document.body.innerHTML += '<!DOCTYPE html>\n' +
@@ -158,7 +188,7 @@ $(document).ready(function(){
                         '</style>\n' +
                         '<body>\n' +
                         '<div class="card-container">\n' +
-                        '    <a href="https://github.com/ryan-bower" target="_blank" >\n' +
+                        '\n' +
                         '        <div class="card-body">\n' +
                         '            <div class="card-top-section">\n' +
                         '                <div class="github-logo-holder">\n' +
@@ -171,7 +201,7 @@ $(document).ready(function(){
                         '                         alt="Github Profile Picture" width="100px" -->\n' +
                         '                </div>\n' +
                         '            </div>\n' +
-                        '            <div class="card-bottom-section">\n' +
+                        '            <div class="card-bottom-section gc-primary">\n' +
                         '                <div class="profile-desc">\n' +
                         '                    <h1 class="profile-full-name gc-name"></h1>\n' +
                         '                    <h1 class="profile-user-name gc-login"></h1>\n' +
@@ -185,7 +215,7 @@ $(document).ready(function(){
                         '                        </div>\n' +
                         '                    </div><!--\n' +
                         '                    --><div class="stat">\n' +
-                        '                        <div class="stat-contents gc-gists-links">\n' +
+                        '                        <div class="stat-contents gc-gists-link">\n' +
                         '                            <h1 class="stat-amount gc-num-gists"></h1>\n' +
                         '                            <p class="stat-name">Gists</p>\n' +
                         '                        </div>\n' +
@@ -199,7 +229,6 @@ $(document).ready(function(){
                         '                </div>\n' +
                         '            </div>\n' +
                         '        </div>\n' +
-                        '    </a>\n' +
                         '</div>\n' +
                         '</body>\n' +
                         '</html>';
@@ -286,7 +315,11 @@ function insertData(username) {
             for(let i = 0; i < bioTexts.length; i++){
                 bioTexts[i].innerHTML = bio_text;
             }
-            document.getElementById('embed-text').value = embed_string;
+            let primaries = document.getElementsByClassName('gc-primary');
+            for(let i = 0; i < primaries.length; i++){
+                primaries[i].style.backgroundColor = 'blue';
+            }
+            //document.getElementById('embed-text').value = embed_string;
         }
     };
     let username_url = 'https://api.github.com/users/' + username;

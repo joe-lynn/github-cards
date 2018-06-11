@@ -94,144 +94,11 @@ $(document).ready(function(){
                         '</html>';
                     break;
                 case 'obvert':
-                    document.body.innerHTML += '<!DOCTYPE html>\n' +
-                        '<html lang="en">\n' +
-                        '<head>\n' +
-                        '    <meta charset="UTF-8">\n' +
-                        '</head>\n' +
-                        '<style>\n' +
-                        '    body {\n' +
-                        '        display: inline-block;\n' +
-                        '        margin:0;\n' +
-                        '        padding:0;\n' +
-                        '        font-family: Sans-Serif;\n' +
-                        '    }\n' +
-                        '    a {\n' +
-                        '        text-decoration: none;\n' +
-                        '    }\n' +
-                        '    .card-body {\n' +
-                        '        width: 300px;\n' +
-                        '        height: 378px;\n' +
-                        '        border-radius: 10px;\n' +
-                        '        border: 2px solid lightgray;\n' +
-                        '        background-color: white;\n' +
-                        '    }\n' +
-                        '    .card-top-section {\n' +
-                        '        height: 40px;\n' +
-                        '    }\n' +
-                        '    .card-bottom-section{\n' +
-                        '        margin-top: 80px; /* calc: img 75px + border 5px */\n' +
-                        '        border-bottom-left-radius: 7px;\n' +
-                        '        border-bottom-right-radius: 7px;\n' +
-                        '        background-color: #4078C0; /* Github official blue */\n' +
-                        '    }\n' +
-                        '    .github-logo-holder {\n' +
-                        '        background-color: transparent;\n' +
-                        '    }\n' +
-                        '    .github-logo-holder img {\n' +
-                        '        padding: 5px;\n' +
-                        '    }\n' +
-                        '    .profile-img-holder {\n' +
-                        '        position: relative;\n' +
-                        '        width: 160px;\n' +
-                        '        margin-left:auto;\n' +
-                        '        margin-right:auto;\n' +
-                        '    }\n' +
-                        '    .profile-img-holder .profile-img {\n' +
-                        '\n' +
-                        '        width: 150px;\n' +
-                        '        height: 150px;\n' +
-                        '        border-radius: 100px;\n' +
-                        '        background: no-repeat center\n' +
-                        '        URL("https://avatars1.githubusercontent.com/u/13069486?s=400&u=6ab8ffd5b3bfed00aea69b070d141e2620fc6f7c&v=4");\n' +
-                        '        background-size: cover;\n' +
-                        '        border: 5px solid white;\n' +
-                        '    }\n' +
-                        '    .profile-desc .profile-full-name {\n' +
-                        '        margin: 0px;\n' +
-                        '        padding-top: 100px;\n' +
-                        '        font-size: 32px;\n' +
-                        '    }\n' +
-                        '    .profile-desc .profile-user-name {\n' +
-                        '        margin: 0px;\n' +
-                        '        padding-top: 10px;\n' +
-                        '        padding-bottom: 10px;\n' +
-                        '        font-size: 23px;\n' +
-                        '    }\n' +
-                        '    .profile-stats {\n' +
-                        '        border-top: 1px solid lightgray;\n' +
-                        '    }\n' +
-                        '    .stat {\n' +
-                        '        display:inline-block;\n' +
-                        '        width: 33.3333%;\n' +
-                        '    }\n' +
-                        '    .stat .stat-contents {\n' +
-                        '        border-right: solid 1px lightgray;\n' +
-                        '        margin-top: 10px;\n' +
-                        '        margin-bottom: 10px;\n' +
-                        '    }\n' +
-                        '    .profile-stats .stat:last-child .stat-contents {\n' +
-                        '        border-right: none;\n' +
-                        '    }\n' +
-                        '    .stat .stat-amount,\n' +
-                        '    .stat .stat-name {\n' +
-                        '        margin: 0px;\n' +
-                        '    }\n' +
-                        '    .profile-desc {\n' +
-                        '        text-align:center;\n' +
-                        '        color: white;\n' +
-                        '    }\n' +
-                        '    .profile-stats{\n' +
-                        '        text-align:center;\n' +
-                        '        color: #333;\n' +
-                        '    }\n' +
-                        '</style>\n' +
-                        '<body>\n' +
-                        '<div class="card-container">\n' +
-                        '\n' +
-                        '        <div class="card-body">\n' +
-                        '            <div class="card-top-section">\n' +
-                        '                <div class="github-logo-holder">\n' +
-                        '                    <img src="assets/GitHub-Mark-32px.png"\n' +
-                        '                         alt="Github Logo" width="25px">\n' +
-                        '                </div>\n' +
-                        '                <div class="profile-img-holder">\n' +
-                        '                    <div class="profile-img"></div>\n' +
-                        '                    <!-- img src="https://avatars1.githubusercontent.com/u/13069486?s=400&u=6ab8ffd5b3bfed00aea69b070d141e2620fc6f7c&v=4"\n' +
-                        '                         alt="Github Profile Picture" width="100px" -->\n' +
-                        '                </div>\n' +
-                        '            </div>\n' +
-                        '            <div class="card-bottom-section gc-primary">\n' +
-                        '                <div class="profile-desc">\n' +
-                        '                    <h1 class="profile-full-name gc-name"></h1>\n' +
-                        '                    <h1 class="profile-user-name gc-login"></h1>\n' +
-                        '                </div>\n' +
-                        '                <div class="profile-stats">\n' +
-                        '                    <!-- TODO: Replace with dynamic js solution -->\n' +
-                        '                    <div class="stat">\n' +
-                        '                        <div class="stat-contents gc-repos-link">\n' +
-                        '                            <h1 class="stat-amount gc-num-repos"></h1>\n' +
-                        '                            <p class="stat-name">Repos</p>\n' +
-                        '                        </div>\n' +
-                        '                    </div><!--\n' +
-                        '                    --><div class="stat">\n' +
-                        '                        <div class="stat-contents gc-gists-link">\n' +
-                        '                            <h1 class="stat-amount gc-num-gists"></h1>\n' +
-                        '                            <p class="stat-name">Gists</p>\n' +
-                        '                        </div>\n' +
-                        '                    </div><!--\n' +
-                        '                    --><div class="stat">\n' +
-                        '                        <div class="stat-contents">\n' +
-                        '                            <h1 class="stat-amount">5</h1>\n' +
-                        '                            <p class="stat-name">Followers</p>\n' +
-                        '                        </div>\n' +
-                        '                    </div>\n' +
-                        '                </div>\n' +
-                        '            </div>\n' +
-                        '        </div>\n' +
-                        '</div>\n' +
-                        '</body>\n' +
-                        '</html>';
+                    $.get("ryan-bower-card.html", function( my_var ) {
+                        // my_var contains whatever that request returned
+                        console.log(my_var);
+                        document.body.innerHTML += my_var;
+                    });
             }
         }
         insertData(user);
@@ -317,7 +184,7 @@ function insertData(username) {
             }
             let primaries = document.getElementsByClassName('gc-primary');
             for(let i = 0; i < primaries.length; i++){
-                primaries[i].style.backgroundColor = 'blue';
+                primaries[i].style.backgroundColor = '#4078C0';
             }
             //document.getElementById('embed-text').value = embed_string;
         }

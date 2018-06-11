@@ -88,15 +88,15 @@
             background-position: -.5em;
             border-color: rgba(27,31,35,0.35);
         }
-        #name{
+        .gc-name{
             color: #292f33;
             font-weight: bold;
             font-size: 1.2em;
         }
-        #login{
+        .gc-login{
             color: #808080;
         }
-        #name:hover,#login:hover{
+        .gc-name:hover,.gc-login:hover{
             color: #0366d6;
         }
         .card-body-container{
@@ -107,7 +107,7 @@
         .jumbotron{
             width: 100%
         }
-        #num-repos,#num-gists,#num-followers{
+        .gc-num-repos,.gc-num-gists,.gc-num-followers{
             color: #0366d6;
             font-weight: bold;
         }
@@ -121,7 +121,7 @@
             border-bottom-color: #d1d5da;
             transition: 0.2s ease;
         }
-        #bio-text{
+        .gc-bio-text{
             font-size: 0.8em;
             color: #808080;
         }
@@ -183,16 +183,16 @@
                             <div class="card-body">
                                 <div class="row">
                                     <div class="col-md-2 avatar-container">
-                                        <a id="avatar-link" href="">
-                                            <img class="img-thumbnail" height="100" width="100" id="avatar-url" src="">
+                                        <a id="" class="gc-avatar-link" href="">
+                                            <img class="img-thumbnail gc-avatar-url" height="100" width="100" src="">
                                         </a>
                                     </div>
                                     <div class="col-md-5">
                                         <div class="row">
-                                            <a href="" id="name">Joe Lynn</a>
+                                            <a href="" class="gc-name"></a>
                                         </div>
                                         <div class="row">
-                                            <a href="" id="login">@joe-lynn</a>
+                                            <a href="" class="gc-login"></a>
                                         </div>
                                     </div>
                                     <div class="col-md-0">
@@ -204,27 +204,27 @@
                                 </div>
                                 <div class="row mt-2">
                                     <div class="col-md-4 border-right border-top border-bottom py-2 link-section">
-                                        <a id="repos-link" href="">
-                                            <div id="num-repos"></div>
+                                        <a class="gc-repos-link" href="">
+                                            <div class="gc-num-repos"></div>
                                             <div class="num-label">REPOS</div>
                                         </a>
                                     </div>
                                     <div class="col-md-4 border-right border-top border-bottom py-2 link-section">
-                                        <a id="gists-link" href="">
-                                            <div id="num-gists"></div>
+                                        <a class="gc-gists-link" href="">
+                                            <div class="gc-num-gists"></div>
                                             <div class="num-label">GISTS</div>
                                         </a>
                                     </div>
                                     <div class="col-md-4 border-top border-bottom py-2 link-section">
-                                        <a id="followers-link" href="">
-                                            <div id="num-followers"></div>
+                                        <a class="gc-followers-link" href="">
+                                            <div class="gc-num-followers"></div>
                                             <div class="num-label">FOLLOWERS</div>
                                         </a>
                                     </div>
                                 </div>
                                 <div class="row mt-2">
                                     <div class="col-md-12">
-                                        <div id="bio-text"></div>
+                                        <div class="gc-bio-text"></div>
                                     </div>
                                 </div>
                             </div>
@@ -244,7 +244,7 @@
                 <div class="card-body">
                     <h5 class="card-title">Obvert</h5>
                     <div class="row">
-                        <iframe scrolling="no" class="mx-auto" width="310" height="388" src="?usr=joe-lynn?crd=obvert" ></iframe>
+                        <iframe frameborder="none" scrolling="no" class="mx-auto" width="310" height="388" src="?usr=joe-lynn?crd=obvert" ></iframe>
                     </div>
                     <div class="row mt-2">
                         <div class="col-md-3 mx-auto">

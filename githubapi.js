@@ -3,7 +3,7 @@ $(document).ready(function(){
     function getParameterByName(name, url) {
         if (!url) url = window.location.href;
         name = name.replace(/[\[\]]/g, "\\$&");
-        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        let regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
             results = regex.exec(url);
         if (!results) return null;
         if (!results[2]) return '';
@@ -16,6 +16,11 @@ $(document).ready(function(){
         if (card != null) {
             document.body.innerHTML = '';
             $('link[rel=stylesheet]').remove();
+            $('script').remove();
+            var hs = document.getElementsByTagName('style');
+            for (var i=0, max = hs.length; i < max; i++) {
+                hs[i].parentNode.removeChild(hs[i]);
+            }
             switch(card) {
                 case 'classique':
                     document.body.innerHTML += '<div class="card shadow-sm bg-white rounded" style="width: 400px; height: 200px">\n' +
@@ -168,20 +173,20 @@ $(document).ready(function(){
                         '            </div>\n' +
                         '            <div class="card-bottom-section">\n' +
                         '                <div class="profile-desc">\n' +
-                        '                    <h1 class="profile-full-name">Ryan Bower</h1>\n' +
-                        '                    <h1 class="profile-user-name">@ryan-bower</h1>\n' +
+                        '                    <h1 class="profile-full-name gc-name"></h1>\n' +
+                        '                    <h1 class="profile-user-name gc-login"></h1>\n' +
                         '                </div>\n' +
                         '                <div class="profile-stats">\n' +
                         '                    <!-- TODO: Replace with dynamic js solution -->\n' +
                         '                    <div class="stat">\n' +
-                        '                        <div class="stat-contents">\n' +
-                        '                            <h1 class="stat-amount">13</h1>\n' +
+                        '                        <div class="stat-contents gc-repos-link">\n' +
+                        '                            <h1 class="stat-amount gc-num-repos"></h1>\n' +
                         '                            <p class="stat-name">Repos</p>\n' +
                         '                        </div>\n' +
                         '                    </div><!--\n' +
                         '                    --><div class="stat">\n' +
-                        '                        <div class="stat-contents">\n' +
-                        '                            <h1 class="stat-amount">3</h1>\n' +
+                        '                        <div class="stat-contents gc-gists-links">\n' +
+                        '                            <h1 class="stat-amount gc-num-gists"></h1>\n' +
                         '                            <p class="stat-name">Gists</p>\n' +
                         '                        </div>\n' +
                         '                    </div><!--\n' +
@@ -235,20 +240,52 @@ function insertData(username) {
 
             let embed_string = '<iframe src="https://joe-lynn.github.io/github-cards/?usr=' + username + '?crd=' + 'classique' + '" height="200" width="400"></iframe>';
 
-            document.getElementById('login').innerHTML = username_at;
-            document.getElementById('login').href = profile_url;
-            document.getElementById('name').innerHTML = name;
-            document.getElementById('name').href=profile_url;
-            document.getElementById("avatar-url").src=avatar_url;
-            document.getElementById("avatar-link").href=profile_url;
-            document.getElementById('num-repos').innerHTML = num_repos;
-            document.getElementById('repos-link').href = repos_url;
-            document.getElementById('num-gists').innerHTML = num_gists;
-            document.getElementById('gists-link').href = gists_url;
-            document.getElementById('num-followers').innerHTML = num_followers;
-            document.getElementById('followers-link').href = followers_url;
-            document.getElementById('bio-text').innerHTML = bio_text;
-
+            let logins = document.getElementsByClassName('gc-login');
+            for(let i = 0; i < logins.length; i++){
+                logins[i].innerHTML = username_at;
+                logins[i].href = profile_url;
+            }
+            let names = document.getElementsByClassName('gc-name');
+            for(let i = 0; i < names.length; i++){
+                names[i].innerHTML = name;
+                names[i].href=profile_url;
+            }
+            let avatarUrls = document.getElementsByClassName("gc-avatar-url");
+            for(let i = 0; i < avatarUrls.length; i++){
+                avatarUrls[i].src=avatar_url;
+            }
+            let avatarLinks = document.getElementsByClassName("gc-avatar-link");
+            for(let i = 0; i < avatarLinks.length; i++){
+                avatarLinks[i].href=profile_url;
+            }
+            let numRepos = document.getElementsByClassName('gc-num-repos');
+            for(let i = 0; i < numRepos.length; i++){
+                numRepos[i].innerHTML = num_repos;
+            }
+            let reposLinks = document.getElementsByClassName('gc-repos-link');
+            for(let i = 0; i < reposLinks.length; i++){
+                reposLinks[i].href = repos_url;
+            }
+            let numGists = document.getElementsByClassName('gc-num-gists');
+            for(let i = 0; i < numGists.length; i++){
+                numGists[i].innerHTML = num_gists;
+            }
+            let gistsLinks = document.getElementsByClassName('gc-gists-link');
+            for(let i = 0; i < gistsLinks.length; i++){
+                gistsLinks[i].href = gists_url;
+            }
+            let numFollowers = document.getElementsByClassName('gc-num-followers');
+            for(let i = 0; i < numFollowers.length; i++){
+                numFollowers[i].innerHTML = num_followers;
+            }
+            let followersLinks = document.getElementsByClassName('gc-followers-link');
+            for(let i = 0; i < followersLinks.length; i++){
+                followersLinks[i].href = followers_url;
+            }
+            let bioTexts = document.getElementsByClassName('gc-bio-text');
+            for(let i = 0; i < bioTexts.length; i++){
+                bioTexts[i].innerHTML = bio_text;
+            }
             document.getElementById('embed-text').value = embed_string;
         }
     };

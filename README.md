@@ -4,8 +4,8 @@ Bootstrap 4 card showing a github profile
 LIVE DEMO @ https://joe-lynn.github.io/github-cards/
 
 
-
-# Your card should abide by the following
+# How to make new cards
+## Your card should abide by the following
 * Use the new card template html document located in the main repo folder
 * Do not use any external styles or scripts
 * Use internal stylesheet
@@ -13,7 +13,7 @@ LIVE DEMO @ https://joe-lynn.github.io/github-cards/
 * Choose one fixed card size
 
 
-# Your card can incorporate dynamic data population through the following classes
+## Your card can incorporate dynamic data population through the following classes
 * .gc-login = GitHub Username and links to GitHub profile
 * .gc-name = GitHub Name and links to GitHub profile
 * .gc-avatar-url = GitHub Avatar URL

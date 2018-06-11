@@ -12,6 +12,7 @@ $(document).ready(function(){
     let user = getParameterByName('usr');
     let card = getParameterByName('crd');
     let primary_color = getParameterByName('pri');
+    let cards = {"ryan": "cards/ryan-bower-card.html"}
 
     if (user != null) {
         if (card != null) {
@@ -94,7 +95,7 @@ $(document).ready(function(){
                         '</html>';
                     break;
                 case 'obvert':
-                    $.get("ryan-bower-card.html", function( my_var ) {
+                    $.get("cards/ryan-bower-card.html", function( my_var ) {
                         // my_var contains whatever that request returned
                         console.log(my_var);
                         document.body.innerHTML += my_var;

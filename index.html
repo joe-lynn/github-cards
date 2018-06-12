@@ -10,12 +10,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
     <script src="scripts/githubapi.js"></script>
+    <script src="scripts/index.js"></script>
 
     <style>
         .jumbotron{
             width: 100%
         }
-        #embed-text{
+        .embed-text{
             resize: none;
             width: 400px
         }
@@ -57,7 +58,7 @@
                         <iframe id="classique-iframe" frameborder="none" scrolling="no" class="mx-auto" width="410" height="210" src="?usr=joe-lynn&crd=classique" ></iframe>
                     </div>
                     <div class="row mt-3">
-                        <textarea readonly onclick="this.select()" class="form-control mx-auto" id="classique-embed-text" rows="3"></textarea>
+                        <textarea readonly onclick="this.select()" class="form-control mx-auto embed-text" id="classique-embed-text" rows="3"></textarea>
                     </div>
                     <div class="row mt-2">
                         <button onclick="selectEmbed()" class="btn btn-sm btn-default mx-auto">Copy!</button>
@@ -84,7 +85,7 @@
                         </div>
                     </div>
                     <div class="row mt-2">
-                        <textarea readonly onclick="this.select()" style="resize: none; width: 400px;" class="form-control mx-auto" id="obvert-embed-text" rows="3"></textarea>
+                        <textarea readonly onclick="this.select()" style="resize: none; width: 400px;" class="form-control mx-auto embed-text" id="obvert-embed-text" rows="3"></textarea>
                     </div>
                     <div class="row mt-2">
                         <button onclick="selectEmbed()" class="btn btn-sm btn-default mx-auto">Copy!</button>

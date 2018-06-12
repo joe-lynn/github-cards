@@ -96,26 +96,25 @@ $(document).ready(function(){
                     break;
                 case 'obvert':
                     $.get("cards/ryan-bower-card.html", function( my_var ) {
-                        // my_var contains whatever that request returned
-                        console.log(my_var);
                         document.body.innerHTML += my_var;
                     });
             }
         }
-        insertData(user);
+        insertData(user, primary_color);
     } else {
-        insertData('joe-lynn');
+        insertData('joe-lynn', '#4078C0');
     }
 });
 
 $(function() {
     $('#github-profile-form').on("submit",function(e) {
         e.preventDefault(); // cancel the actual submit
-        insertData(document.getElementById("github-username").value);
+        insertData(document.getElementById("github-username").value, '#4078C0');
     });
 });
 
-function insertData(username) {
+function insertData(username, pri) {
+    console.log(username);
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
@@ -185,12 +184,12 @@ function insertData(username) {
             }
             let primaries = document.getElementsByClassName('gc-primary');
             for(let i = 0; i < primaries.length; i++){
-                primaries[i].style.backgroundColor = '#4078C0';
+                    primaries[i].style.backgroundColor = pri;
             }
             //document.getElementById('embed-text').value = embed_string;
         }
     };
-    let username_url = 'https://api.github.com/users/' + username;
+    let username_url = 'https://api.github.com/users/' + username + '?access_token=64f13ef299a1553ffc633d764c07fe7fd9a3b31d';
     xhttp.open("GET", username_url, true);
     xhttp.send();
 }

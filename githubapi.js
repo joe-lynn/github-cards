@@ -23,8 +23,6 @@ $(document).ready(function(){
             for (var i=0, max = hs.length; i < max; i++) {
                 hs[i].parentNode.removeChild(hs[i]);
             }
-            console.log('gothe556re');
-            console.log(card);
             switch(card) {
                 case 'classique':
                     document.body.innerHTML += '<!DOCTYPE html>\n' +
@@ -98,8 +96,6 @@ $(document).ready(function(){
                     break;
                 case 'obvert':
                     $.get("cards/ryan-bower-card.html", function( my_var ) {
-                        // my_var contains whatever that request returned
-                        console.log(my_var);
                         document.body.innerHTML += my_var;
                     });
             }
@@ -118,6 +114,7 @@ $(function() {
 });
 
 function insertData(username, pri) {
+    console.log(username);
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
@@ -192,7 +189,7 @@ function insertData(username, pri) {
             //document.getElementById('embed-text').value = embed_string;
         }
     };
-    let username_url = 'https://api.github.com/users/' + username;
+    let username_url = 'https://api.github.com/users/' + username + '?access_token=64f13ef299a1553ffc633d764c07fe7fd9a3b31d';
     xhttp.open("GET", username_url, true);
     xhttp.send();
 }

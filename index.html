@@ -4,129 +4,16 @@
     <meta charset="UTF-8">
     <title>Github Card</title>
 
-    <script
-            src="https://code.jquery.com/jquery-3.3.1.js"
-            integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
-            crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
 
-    <script src="githubapi.js"></script>
+    <script src="scripts/githubapi.js"></script>
 
     <style>
-        .follow-button {
-            align-items: flex-start ;
-            background-color: rgb(239, 243, 246) ;
-            background-image: linear-gradient(-180deg, rgb(250, 251, 252) 0%, rgb(239, 243, 246) 90%) ;
-            background-position-x: -1px ;
-            background-position-y: -1px ;
-            background-size: 110% 110% ;
-            border-bottom-color: rgba(27, 31, 35, 0.2) ;
-            border-bottom-left-radius: 3.5px ;
-            border-bottom-right-radius: 3.5px ;
-            border-bottom-style: solid ;
-            border-bottom-width: 1px ;
-            border-image-outset: 0px ;
-            border-image-repeat: stretch ;
-            border-image-slice: 100% ;
-            border-image-source: none ;
-            border-image-width: 1 ;
-            border-left-color: rgba(27, 31, 35, 0.2) ;
-            border-left-style: solid ;
-            border-left-width: 1px ;
-            border-right-color: rgba(27, 31, 35, 0.2) ;
-            border-right-style: solid ;
-            border-right-width: 1px ;
-            border-top-color: rgba(27, 31, 35, 0.2) ;
-            border-top-left-radius: 3.5px ;
-            border-top-right-radius: 3.5px ;
-            border-top-style: solid ;
-            border-top-width: 1px ;
-            box-sizing: border-box ;
-            color: rgb(36, 41, 46) ;
-            cursor: pointer ;
-            display: block ;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" ;
-            font-size: 14px ;
-            font-style: normal ;
-            font-variant-caps: normal ;
-            font-variant-east-asian: normal ;
-            font-variant-ligatures: normal ;
-            font-variant-numeric: normal ;
-            font-weight: 600 ;
-            height: 34px ;
-            letter-spacing: normal ;
-            line-height: 20px ;
-            margin-bottom: 0px ;
-            margin-left: 0px ;
-            margin-right: 0px ;
-            overflow-x: visible ;
-            overflow-y: visible ;
-            padding-bottom: 6px ;
-            padding-left: 12px ;
-            padding-right: 12px ;
-            padding-top: 6px ;
-            position: relative ;
-            text-align: center ;
-            text-indent: 0px ;
-            text-rendering: auto ;
-            text-shadow: none ;
-            text-size-adjust: 100% ;
-            text-transform: none ;
-            top: 0px ;
-            user-select: none ;
-            vertical-align: middle ;
-            white-space: nowrap ;
-            width: 100% ;
-            word-spacing: 0px ;
-            word-wrap: break-word ;
-            writing-mode: horizontal-tb ;
-            -webkit-appearance: none ;
-            -webkit-border-image: none ;
-        }
-        .follow-button:hover{
-            background-color: #e6ebf1;
-            background-image: linear-gradient(-180deg, #f0f3f6 0%, #e6ebf1 90%);
-            background-position: -.5em;
-            border-color: rgba(27,31,35,0.35);
-        }
-        .gc-name{
-            color: #292f33;
-            font-weight: bold;
-            font-size: 1.2em;
-        }
-        .gc-login{
-            color: #808080;
-        }
-        .gc-name:hover,.gc-login:hover{
-            color: #0366d6;
-        }
-        .card-body-container{
-            height: 200px;
-            width: 400px;
-            background-color: #fffffa
-        }
         .jumbotron{
             width: 100%
-        }
-        .gc-num-repos,.gc-num-gists,.gc-num-followers{
-            color: #0366d6;
-            font-weight: bold;
-        }
-        .num-label{
-            color:#6a737d;
-            font-size: 0.9em;
-        }
-        .num-label:hover{
-            color: #24292e;
-            text-decoration: none;
-            border-bottom-color: #d1d5da;
-            transition: 0.2s ease;
-        }
-        .gc-bio-text{
-            font-size: 0.8em;
-            color: #808080;
         }
         #embed-text{
             resize: none;
@@ -135,22 +22,7 @@
         a,a:hover,a:focus,a:visited{
             text-decoration: none;
         }
-        .avatar-container{
-            padding-right: 0 !important;
-            margin-right: .5em;
-        }
     </style>
-
-    <script>
-      $(document).ready(function(){
-        $(".link-section").hover(function(){
-          $(this).find(".num-label").css("color", "#24292e");
-        }, function(){
-          $(this).find(".num-label").css("color", "#6a737d");
-        });
-      });
-    </script>
-
 </head>
 <body class="bg-info">
 <div class="container">
@@ -185,7 +57,7 @@
                         <iframe id="classique-iframe" frameborder="none" scrolling="no" class="mx-auto" width="410" height="210" src="?usr=joe-lynn&crd=classique" ></iframe>
                     </div>
                     <div class="row mt-3">
-                        <textarea readonly onclick="this.select()" class="form-control mx-auto" id="embed-text" rows="3"></textarea>
+                        <textarea readonly onclick="this.select()" class="form-control mx-auto" id="classique-embed-text" rows="3"></textarea>
                     </div>
                     <div class="row mt-2">
                         <button onclick="selectEmbed()" class="btn btn-sm btn-default mx-auto">Copy!</button>
@@ -212,7 +84,7 @@
                         </div>
                     </div>
                     <div class="row mt-2">
-                        <textarea readonly onclick="this.select()" style="resize: none; width: 400px;" class="form-control mx-auto" id="embed-text" rows="3"></textarea>
+                        <textarea readonly onclick="this.select()" style="resize: none; width: 400px;" class="form-control mx-auto" id="obvert-embed-text" rows="3"></textarea>
                     </div>
                     <div class="row mt-2">
                         <button onclick="selectEmbed()" class="btn btn-sm btn-default mx-auto">Copy!</button>

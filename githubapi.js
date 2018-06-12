@@ -102,19 +102,19 @@ $(document).ready(function(){
         }
         insertData(user, primary_color);
     } else {
-        insertData('joe-lynn', '#4078C0');
+        //insertData('joe-lynn', '#4078C0');
     }
 });
 
 $(function() {
     $('#github-profile-form').on("submit",function(e) {
         e.preventDefault(); // cancel the actual submit
-        insertData(document.getElementById("github-username").value, '#4078C0');
+        document.getElementById('classique-iframe').src = 'https://joe-lynn.github.io/github-cards/?usr=' + document.getElementById("github-username").value + '&crd=' + 'classique';
+        document.getElementById('obvert-iframe').src = 'https://joe-lynn.github.io/github-cards/?usr=' + document.getElementById("github-username").value + '&crd=' + 'obvert';
     });
 });
 
 function insertData(username, pri) {
-    console.log(username);
     let xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
         if (this.readyState === 4 && this.status === 200) {
@@ -189,7 +189,8 @@ function insertData(username, pri) {
             //document.getElementById('embed-text').value = embed_string;
         }
     };
-    let username_url = 'https://api.github.com/users/' + username + '?access_token=64f13ef299a1553ffc633d764c07fe7fd9a3b31d';
+    let access_token = '?access_token=215e5a221f3310884f9f0b3142fa724a23e4bb70';
+    let username_url = 'https://api.github.com/users/' + username;
     xhttp.open("GET", username_url, true);
     xhttp.send();
 }

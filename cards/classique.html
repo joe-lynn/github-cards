@@ -2,12 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
-
 </head>
 <style>
     .avatar-container{
@@ -124,67 +118,80 @@
         width: 400px;
         background-color: #fffffa
     }
-</style>
-<script>
-    $(document).ready(function(){
-        $(".link-section").hover(function(){
-            $(this).find(".num-label").css("color", "#24292e");
-        }, function(){
-            $(this).find(".num-label").css("color", "#6a737d");
-        });
-    });
-</script>
-<body>
-    <div class="card shadow-sm rounded mx-auto card-body-container">
-        <div class="card-body">
-            <div class="row">
-                <div class="col-md-2 avatar-container">
-                    <a id="" class="gc-avatar-link" href="">
-                        <img class="img-thumbnail gc-avatar-url" height="100" width="100" src="">
-                    </a>
-                </div>
-                <div class="col-md-5">
-                    <div class="row">
-                        <a href="" class="gc-name"></a>
-                    </div>
-                    <div class="row">
-                        <a href="" class="gc-login"></a>
-                    </div>
-                </div>
-                <div class="col-md-0">
 
-                </div>
-                <div class="col-md-4">
-                    <button class="follow-button">Follow</button>
-                </div>
+
+
+
+
+
+
+
+
+    .jcard-body {
+        width: 400px;
+        height: 200px;
+        background-color: #fffffa;
+        border-radius: 10px;
+        border: 2px solid #808080;
+    }
+    .avatar-img {
+        border: 1px solid #ddd; /* Gray border */
+        border-radius: 4px;  /* Rounded border */
+        padding: 5px; /* Some padding */
+        width: 50px; /* Set a small width */
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    /* Add a hover effect (blue shadow) */
+    .avatar-img:hover {
+        box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+    }
+    .jname {
+        position: relative;
+        bottom: 30px;
+    }
+    .jlogin {
+        position: relative;
+        right: 80px;
+    }
+    .jfollowbutton {
+        float: right;
+        width: 100px;
+
+    }
+    .box {
+        float: left;
+        width: 33.33%;
+    }
+</style>
+<body>
+    <div class="jcard-container">
+        <div class="jcard-body">
+            <a class="gc-avatar-link">
+                <img class="gc-avatar-url avatar-img">
+            </a>
+            <a class="gc-name jname"></a>
+            <a class="gc-login jlogin"></a>
+            <div class="jfollowbutton">
+                <button class="follow-button">Follow</button>
             </div>
-            <div class="row mt-2">
-                <div class="col-md-4 border-right border-top border-bottom py-2 link-section">
-                    <a class="gc-repos-link" href="">
-                        <div class="gc-num-repos"></div>
-                        <div class="num-label">REPOS</div>
-                    </a>
-                </div>
-                <div class="col-md-4 border-right border-top border-bottom py-2 link-section">
-                    <a class="gc-gists-link" href="">
-                        <div class="gc-num-gists"></div>
-                        <div class="num-label">GISTS</div>
-                    </a>
-                </div>
-                <div class="col-md-4 border-top border-bottom py-2 link-section">
-                    <a class="gc-followers-link" href="">
-                        <div class="gc-num-followers"></div>
-                        <div class="num-label">FOLLOWERS</div>
-                    </a>
-                </div>
-            </div>
-            <div class="row mt-2">
-                <div class="col-md-12">
-                    <div class="gc-bio-text"></div>
-                </div>
-            </div>
+            <hr>
+            <a class="gc-repos-link box">
+                <div class="gc-num-repos"></div>
+                <div>REPOS</div>
+            </a>
+            <a class="gc-gists-link box">
+                <div class="gc-num-gists"></div>
+                <div>GISTS</div>
+            </a>
+            <a class="gc-followers-link box">
+                <div class="gc-num-followers"></div>
+                <div>FOLLOWERS</div>
+            </a>
+            <hr>
+            <div class="gc-bio-text"></div>
         </div>
     </div>
-</div>
 </body>
 </html>

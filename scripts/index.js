@@ -26,7 +26,7 @@ $(document).ready(function(){
     let card = getParameterByName('crd');
     let primary_color = getParameterByName('pri');
     //TODO: Convert to crd: url dict for use in switch/case?
-    //let cards = {"ryan": "cards/ryan-bower-card.html"};
+    //let cards = {"ryan": "cards/obvert.html"};
 
     if (user != null) {
         if (card != null) {
@@ -43,7 +43,7 @@ $(document).ready(function(){
                     template_url = 'cards/classique.html';
                     break;
                 case 'obvert':
-                    template_url = "cards/ryan-bower-card.html";
+                    template_url = "cards/obvert.html";
             }
             $.get(template_url, function( my_var ) {
                 document.body.innerHTML += my_var;

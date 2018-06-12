@@ -67,6 +67,7 @@ function insertData(username, pri) {
                 bioTexts[i].innerHTML = bio_text;
             }
             let primaries = document.getElementsByClassName('gc-primary');
+            pri = '#' + pri;
             for(let i = 0; i < primaries.length; i++){
                     primaries[i].style.backgroundColor = pri;
             }

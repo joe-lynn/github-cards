@@ -1,5 +1,5 @@
-function selectEmbed() {
-    document.getElementById('embed-text').select();
+function selectEmbed(idString) {
+    document.getElementById(idString).select();
     document.execCommand("copy");
 }
 
@@ -7,8 +7,10 @@ function selectEmbed() {
 $(function() {
     $('#github-profile-form').on("submit",function(e) {
         e.preventDefault(); // cancel the actual submit
-        document.getElementById('classique-iframe').src = 'https://joe-lynn.github.io/github-cards/?usr=' + document.getElementById("github-username").value + '&crd=' + 'classique';
-        document.getElementById('obvert-iframe').src = 'https://joe-lynn.github.io/github-cards/?usr=' + document.getElementById("github-username").value + '&crd=' + 'obvert';
+        let username = document.getElementById("github-username").value;
+        document.getElementById('classique-iframe').src = 'https://joe-lynn.github.io/github-cards/?usr=' + username + '&crd=' + 'classique';
+        document.getElementById('obvert-iframe').src = 'https://joe-lynn.github.io/github-cards/?usr=' + username + '&crd=' + 'obvert';
+        populateEmbedTexts(username)
     });
 });
 
@@ -33,8 +35,8 @@ $(document).ready(function(){
             document.body.innerHTML = '';
             $('link[rel=stylesheet]').remove();
             $('script').remove();
-            var hs = document.getElementsByTagName('style');
-            for (var i=0, max = hs.length; i < max; i++) {
+            let hs = document.getElementsByTagName('style');
+            for (let i=0, max = hs.length; i < max; i++) {
                 hs[i].parentNode.removeChild(hs[i]);
             }
             let template_url = '';
@@ -49,8 +51,19 @@ $(document).ready(function(){
                 document.body.innerHTML += my_var;
             });
         }
-        insertData(user, primary_color);
+        callApi(user, populateCards);
     } else {
-        //insertData('joe-lynn', '#4078C0');
+        populateEmbedTexts(user);
     }
 });
+
+function populateEmbedTexts(username) {
+    if(username == null){
+        username = 'joe-lynn'
+    }
+    let classique_embed_string = '<iframe src="https://joe-lynn.github.io/github-cards/?usr=' + username + '?crd=' + 'classique' + '" height="200" width="400"></iframe>';
+    let obvert_embed_string = '<iframe src="https://joe-lynn.github.io/github-cards/?usr=' + username + '?crd=' + 'obvert' + '" height="400" width="300"></iframe>';
+    document.getElementById('classique-embed-text').value = classique_embed_string;
+    document.getElementById('obvert-embed-text').value = obvert_embed_string;
+
+}

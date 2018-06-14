@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5da89f94-f85e-41e0-9f90-cc3c7bd47de4" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/scripts/populatecards.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cards/classique.html" beforeDir="false" afterPath="$PROJECT_DIR$/cards/classique.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cards/ryan-bower-card.html" beforeDir="false" afterPath="$PROJECT_DIR$/cards/obvert.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/githubapi.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/githubapi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/scripts/index.js" afterDir="false" />
     </list>
@@ -23,17 +23,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="73" column="160" lean-forward="true" selection-start-line="73" selection-start-column="160" selection-end-line="73" selection-end-column="166" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/scripts/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="216">
-              <caret line="22" column="43" lean-forward="true" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+            <state relative-caret-position="221">
+              <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -41,26 +32,26 @@
       <file leaf-file-name="githubapi.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/scripts/githubapi.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
-              <caret line="69" column="28" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="28" />
+            <state relative-caret-position="85">
+              <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="obvert.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/cards/obvert.html">
+      <file leaf-file-name="populatecards.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/scripts/populatecards.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="849">
-              <caret line="115" column="47" selection-start-line="115" selection-start-column="40" selection-end-line="115" selection-end-column="47" />
+            <state relative-caret-position="-331">
+              <caret column="45" lean-forward="true" selection-start-column="45" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="classique.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/cards/classique.html">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/scripts/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="604">
-              <caret line="166" column="22" selection-start-line="166" selection-start-column="22" selection-end-line="166" selection-end-column="22" />
+            <state relative-caret-position="526">
+              <caret line="54" column="12" lean-forward="true" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -80,6 +71,8 @@
       <find>consol</find>
       <find>access</find>
       <find>gc-prim</find>
+      <find>selectEmbed</find>
+      <find>pri</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -96,11 +89,12 @@
         <option value="$PROJECT_DIR$/ryan-bower-card.html" />
         <option value="$PROJECT_DIR$/tstiframe.html" />
         <option value="$PROJECT_DIR$/githubapi.js" />
-        <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/scripts/index.js" />
         <option value="$PROJECT_DIR$/cards/ryan-bower-card.html" />
-        <option value="$PROJECT_DIR$/scripts/githubapi.js" />
         <option value="$PROJECT_DIR$/cards/classique.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/scripts/populatecards.js" />
+        <option value="$PROJECT_DIR$/scripts/index.js" />
+        <option value="$PROJECT_DIR$/scripts/githubapi.js" />
       </list>
     </option>
   </component>
@@ -125,7 +119,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -147,6 +140,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -199,7 +193,8 @@
       <workItem from="1528774000571" duration="852000" />
       <workItem from="1528817503167" duration="118000" />
       <workItem from="1528817876323" duration="93000" />
-      <workItem from="1528829168968" duration="3877000" />
+      <workItem from="1528829168968" duration="5705000" />
+      <workItem from="1528913955159" duration="5199000" />
     </task>
     <task id="LOCAL-00001" summary="Created  and styled card with static sample content.">
       <created>1528506572483</created>
@@ -278,11 +273,25 @@
       <option name="project" value="LOCAL" />
       <updated>1528817944129</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="classique is off jquery/bootstrap but still needs work">
+      <created>1528833411298</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1528833411298</updated>
+    </task>
+    <task id="LOCAL-00013" summary="removed placeholder items for release 2">
+      <created>1528834875220</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1528834875220</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31396000" />
+    <option name="totallyTimeSpent" value="38423000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -292,7 +301,6 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32935324" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32943678" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.26992562" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3323383" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -306,6 +314,7 @@
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32935324" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32943678" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,7 +334,9 @@
     <MESSAGE value="fix ryans avatar image" />
     <MESSAGE value="fix ryans relative path for github logo asset" />
     <MESSAGE value="she think she wrong but she rite" />
-    <option name="LAST_COMMIT_MESSAGE" value="she think she wrong but she rite" />
+    <MESSAGE value="classique is off jquery/bootstrap but still needs work" />
+    <MESSAGE value="removed placeholder items for release 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed placeholder items for release 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -333,13 +344,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/cards/obvert.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1751">
-          <caret line="103" column="27" lean-forward="true" selection-start-line="103" selection-start-column="27" selection-end-line="103" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -593,20 +597,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/tstiframe.html" />
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="73" column="160" lean-forward="true" selection-start-line="73" selection-start-column="160" selection-end-line="73" selection-end-column="166" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="22" column="43" lean-forward="true" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/cards/obvert.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="849">
@@ -614,17 +604,38 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/githubapi.js">
+    <entry file="file://$PROJECT_DIR$/cards/classique.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="69" column="28" selection-start-line="69" selection-start-column="28" selection-end-line="69" selection-end-column="28" />
+        <state relative-caret-position="17">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/cards/classique.html">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="604">
-          <caret line="166" column="22" selection-start-line="166" selection-start-column="22" selection-end-line="166" selection-end-column="22" />
+        <state relative-caret-position="221">
+          <caret line="13" column="43" selection-start-line="13" selection-start-column="43" selection-end-line="13" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/githubapi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="54" column="12" lean-forward="true" selection-start-line="54" selection-start-column="12" selection-end-line="54" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/populatecards.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-331">
+          <caret column="45" lean-forward="true" selection-start-column="45" selection-end-column="45" />
         </state>
       </provider>
     </entry>

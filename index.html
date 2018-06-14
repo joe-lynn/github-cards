@@ -11,6 +11,7 @@
 
     <script src="scripts/githubapi.js"></script>
     <script src="scripts/index.js"></script>
+    <script src="scripts/populatecards.js"></script>
 
     <style>
         .jumbotron{
@@ -61,7 +62,7 @@
                         <textarea readonly onclick="this.select()" class="form-control mx-auto embed-text" id="classique-embed-text" rows="3"></textarea>
                     </div>
                     <div class="row mt-2">
-                        <button onclick="selectEmbed()" class="btn btn-sm btn-default mx-auto">Copy!</button>
+                        <button onclick="selectEmbed('classique-embed-text')" class="btn btn-sm btn-default mx-auto">Copy!</button>
                     </div>
                 </div>
             </div>
@@ -69,7 +70,7 @@
         <div class="col-md-6">
             <div class="card">
                 <div class="card-body">
-                    <h5 class="card-title">Obvert</h5>
+                    <h5 class="card-title">Obvert - 300x400</h5>
                     <div class="row">
                         <iframe id="obvert-iframe" frameborder="none" scrolling="no" class="mx-auto" width="310" height="388" src="?usr=joe-lynn&crd=obvert&pri=4078C0" ></iframe>
                     </div>
@@ -77,7 +78,7 @@
                         <textarea readonly onclick="this.select()" style="resize: none; width: 400px;" class="form-control mx-auto embed-text" id="obvert-embed-text" rows="3"></textarea>
                     </div>
                     <div class="row mt-2">
-                        <button onclick="selectEmbed()" class="btn btn-sm btn-default mx-auto">Copy!</button>
+                        <button onclick="selectEmbed('obvert-embed-text')" class="btn btn-sm btn-default mx-auto">Copy!</button>
                     </div>
                 </div>
             </div>
